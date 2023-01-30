@@ -71,6 +71,11 @@ public class PlayerMovement : MonoBehaviour
                 GameOver();
             }
         }
+        
+        // Michael's Change:
+        // Changes color of ball when running into wall
+        GetComponent<Renderer>().material.color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
+        
         // IF the player touches the goal,
         if (collision.gameObject.tag == "Goal")
         {
